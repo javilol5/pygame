@@ -27,7 +27,8 @@ COLORES = [
     (102,51,51),    # marron
     (0,102,51),     # verde
     (233,69,67),    # adrian
-    (177,124,232)   # gabriela
+    (177,124,232),   # gabriela
+    (223, 153, 181) # rosita
     ]
 
 # --- Inicialización ---
