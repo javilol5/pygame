@@ -43,7 +43,7 @@ for y in range(ALTO):
     for x in range(ANCHO):
         fila.append({
             #"color": random.choice(COLORES),
-            "color": (0, 0, 0),  # iniciar todo en rojo para ver mutaciones
+            "color": (0, 0, 0),  # iniciar _todo en rojo para ver mutaciones
             "visible": True,
             "reaparicion": None
         })
