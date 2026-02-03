@@ -3,9 +3,9 @@ import random
 import time
 
 # --- Configuración ---
-ANCHO = 10
-ALTO = 9
-TAM_CELDA = 60
+ANCHO = 40
+ALTO = 90
+TAM_CELDA = 10
 MARGEN = 2
 
 VENTANA_ANCHO = ANCHO * TAM_CELDA
@@ -13,14 +13,22 @@ VENTANA_ALTO = ALTO * TAM_CELDA
 
 COLORES = [
     (255, 0, 0),    # rojo
-    (0, 255, 0),    # verde
+    (0, 255, 0),    # lima
     (0, 0, 255),    # azul
     (255, 255, 0),  # amarillo
     (255, 0, 255),  # magenta
     (0, 255, 255),  # cyan
     (255,255,255),  # blanco
-    (0,0,0)         # negro
-]
+    (0,0,0),        # negro
+    (179,179,179),  # gris
+    (153,0,204),    # morado
+    (255,102,0),    # naranja
+    (255,153,204),  # rosa
+    (102,51,51),    # marron
+    (0,102,51),     # verde
+    (233,69,67),    # adrian
+    (177,124,232)   # gabriela
+    ]
 
 # --- Inicialización ---
 pygame.init()
@@ -35,7 +43,7 @@ for y in range(ALTO):
     for x in range(ANCHO):
         fila.append({
             #"color": random.choice(COLORES),
-            "color": (255, 0, 0),  # iniciar todo en rojo para ver mutaciones
+            "color": (0, 0, 0),  # iniciar todo en rojo para ver mutaciones
             "visible": True,
             "reaparicion": None
         })
@@ -108,7 +116,7 @@ while ejecutando:
                     # Hay vecinos visibles
                     nuevo_color = random.choice(vecinos)
                     # Probabilidad de mutar
-                    if random.random() < 0.01:
+                    if random.random() < 0.05:
                         nuevo_color = mutar_color(nuevo_color)
                     celda["color"] = nuevo_color
                     celda["visible"] = True
