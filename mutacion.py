@@ -3,9 +3,9 @@ import random
 import time
 
 # --- Configuración ---
-ANCHO = 40
-ALTO = 90
-TAM_CELDA = 10
+ANCHO = 10
+ALTO = 10
+TAM_CELDA = 100
 MARGEN = 2
 
 VENTANA_ANCHO = ANCHO * TAM_CELDA
@@ -27,7 +27,8 @@ COLORES = [
     (102,51,51),    # marron
     (0,102,51),     # verde
     (233,69,67),    # adrian
-    (177,124,232)   # gabriela
+    (177,124,232),  # gabriela
+    (190,230,10)    # edwyn
     ]
 
 # --- Inicialización ---
@@ -42,8 +43,8 @@ for y in range(ALTO):
     fila = []
     for x in range(ANCHO):
         fila.append({
-            #"color": random.choice(COLORES),
-            "color": (0, 0, 0),  # iniciar _todo en rojo para ver mutaciones
+            "color": random.choice(COLORES),
+            #"color": (0, 0, 0),  # iniciar _todo en rojo para ver mutaciones
             "visible": True,
             "reaparicion": None
         })
